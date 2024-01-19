@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.2"
+ruby "3.1.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1.7", ">= 6.1.7.1"
@@ -28,23 +28,21 @@ gem "jbuilder", "~> 2.7"
 # Reduces boot times through caching; required in config/boot.rb
 gem "active_model_serializers", "~> 0.10.14"
 gem "bootsnap", ">= 1.4.4", require: false
-gem "devise_token_auth"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "devise"
+  gem "devise_token_auth"
   gem "factory_bot_rails"
   gem "faker"
   gem "pry-byebug"
   gem "pry-doc"
   gem "pry-rails"
+  gem "rack-cors"
   gem "rspec-rails"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-  gem "annotate"
-  gem "devise"
-  gem "devise_token_auth"
-  gem 'rack-cors'
 end
 
 group :development do

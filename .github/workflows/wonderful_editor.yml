@@ -42,4 +42,4 @@ jobs:
       - name: Rubocop
         run: bundle exec rubocop --parallel
       - name: RSpec
-        run: bundle exec rspecs
+        run: bundle exec rspec

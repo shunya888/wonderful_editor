@@ -28,8 +28,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gem-
       - name: Install gems
-        run:
-          bundle install --path vendor/bundle --jobs 4
+        run: bundle install --path vendor/bundle --jobs 4
       - name: Setup Database
         run: |
           cp -v config/database.yml.ci config/database.yml
@@ -42,4 +41,4 @@ jobs:
       - name: Rubocop
         run: bundle exec rubocop --parallel
       - name: RSpec
-        run: bundle exec rspecs
+        run: bundle exec rspec
